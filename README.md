@@ -22,12 +22,12 @@ where:
 
 ### Network Structure
 - **81 neurons** corresponding to Sudoku grid cells
-- **Excitatory connections** within neurons sharing the same number
-- **Inhibitory connections** for neurons within the same row, column, or subgrid
+- **Inhibitory connections** for neurons within the **same row**, **column**, or **3 X 3 subgrid**
+- **Excitatory connections** within rest of the neurons
 
 ### Synaptic Connections
-- **Excitatory synapses:** Connect neurons that share the same value in the Sudoku grid
-- **Inhibitory synapses:** Connect neurons within the same row, column, or 3×3 subgrid
+- **Excitatory synapses:** Positive coupling amongst neurons connected via excitation - Leads to synchronization
+- **Inhibitory synapses:** Negative coupling amongst neurons connected via inhibition - Leads to desynchronization
 
 ## Installation & Dependencies
 Ensure you have the required Python packages installed:
@@ -62,6 +62,7 @@ The script will:
 | `exc` | Excitatory synaptic weight | `0.002` |
 | `inh` | Inhibitory synaptic weight | `0.006` |
 | `seedi` | Random seed for reproducibility | `[3]` |
+| `I_d` | DC input to each of 9 groups | `0.59 to 0.67 ` |
 
 ## Visualization
 The script produces:
